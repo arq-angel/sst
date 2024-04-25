@@ -1,11 +1,7 @@
 import Navbar from "../components/Navbar.jsx";
 
 const Header = () => {
-    return(
-        <>
-            <Navbar />
-        </>
-    );
+    return <Navbar />
 }
 
 export default Header;

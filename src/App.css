@@ -1,7 +1,47 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.navbar {
-    margin-top: 0px
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
+
+.mega-menu-content {
+    position: absolute; /* Positioned relative to its first positioned ancestor element */
+    width: 100%; /* Make it as wide as its parent */
+    left: 0; /* Align it to the left edge of the parent */
+    box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+    transform: translateX(-50%); /* Center align the mega menu */
+    top: 100%; /* Position just below the navbar */
+    /* Other styles like background, padding, etc. */
+}
+
+/* Make sure the parent of the mega menu content is relative */
+nav {
+    position: relative;
+}
+
+.mega-menu-content {
+    overflow-y: hidden; /* Hide the overflow content */
+}
+
+/* Transition for max-height should be smooth and quick enough to simulate expansion */
+.transition-all {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Adjust max-height to be the height of your expanded mega menu */
+.max-h-96 {
+    max-height: 24rem; /* Example value, adjust as needed */
+}
+
+.max-h-0 {
+    max-height: 0;
+}
+
